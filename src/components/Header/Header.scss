@@ -1,0 +1,30 @@
+@import "../../style-variables/variables.scss";
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__mark{
+        display: flex;
+        align-items: center;
+    }
+    &__logo{
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+    }
+    &__title{
+        font-family: 'Dancing script';
+        font-size: 25px ;
+        margin-left: 10px;
+    }
+    &__burger{
+        padding: 5px;
+        height: 25px;
+        background-color: $secondary-color;
+        border-radius: 5px;
+        font-size: 25px;
+    }
+
+}
