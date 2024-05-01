@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
     &__mark{
         display: flex;
         align-items: center;
@@ -18,13 +19,6 @@
         font-family: 'Dancing script';
         font-size: 25px ;
         margin-left: 10px;
-    }
-    &__burger{
-        padding: 5px;
-        height: 25px;
-        background-color: $secondary-color;
-        border-radius: 5px;
-        font-size: 25px;
     }
 
 }

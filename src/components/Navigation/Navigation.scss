@@ -1,0 +1,49 @@
+@import "../../style-variables/variables.scss";
+
+.navigation{
+    &__burger{
+        padding: 5px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        background-color: $secondary-color;
+        border: none;
+        border-radius: 5px;
+        font-size: 25px;
+        color: $main-color;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__box{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform : translateY(-100%);
+        transition: 400ms;
+        &--active{
+            transform : translateY(0px)
+        }
+    }
+    &__menu{
+        background-color: $secondary-color;
+        box-shadow: -4px 4px 5px rgba(0,0,0,0.2) ;
+        width: 130px;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 0 0 0 10px;
+    }
+    &__link{
+        margin-left: 20px;
+        padding: 8px 15px;
+        text-decoration: none;
+        color: black;
+        &--active{
+            background-color: $light-grey;
+            border-radius: 20px 0 0 20px;
+        }
+    }
+}
+

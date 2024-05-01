@@ -1,0 +1,23 @@
+@import "../../style-variables/variables.scss";
+
+.home{
+    margin: 70px 0 ;
+    text-align: center;
+    &__title{
+        color: $main-color;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.5em;
+        width: 250px;
+        margin: auto;
+    }
+    &__text{
+        margin: 60px 0;
+        text-align: left;
+        font-size: 14px;
+    }
+    &__button{
+        @include button;
+    }
+
+}

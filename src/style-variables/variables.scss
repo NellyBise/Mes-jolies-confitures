@@ -1,3 +1,18 @@
 $main-color: #B70709;
 $secondary-color: #D7EEE6;
 $light-grey: #F6F5F3;
+
+
+@mixin button {
+    background-color: $main-color;
+    width: 180px;
+    padding: 8px;
+    color: $secondary-color;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    &:hover{
+        cursor: pointer;
+        color: yellow;
+    }
+}

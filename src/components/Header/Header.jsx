@@ -1,5 +1,6 @@
 import logo from '../../assets/LOGO.jpg'
 import './Header.scss'
+import Navigation from '../Navigation/Navigation'
 
 function Header() {
   return (
@@ -12,9 +13,7 @@ function Header() {
         />
         <h1 className="header__title"> Mes jolies confitures</h1>
       </div>
-      <p className="header__burger">
-        <i class="fa-solid fa-bars"></i>
-      </p>
+      <Navigation />
     </header>
   )
 }

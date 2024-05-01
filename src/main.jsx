@@ -1,5 +1,12 @@
 import { render } from 'preact'
-import { App } from './app.jsx'
 import './index.scss'
+import * as React from 'react'
+import { RouterProvider } from 'react-router-dom'
 
-render(<App />, document.getElementById('app'))
+import router from './router.jsx'
+render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
+  document.getElementById('app')
+)
