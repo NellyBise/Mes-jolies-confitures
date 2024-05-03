@@ -2,6 +2,12 @@
 
 .navigation{
     max-width: 480px;
+    &__screenMenu{
+        display: none;
+        @media only screen and (min-width: 768px){
+            display: block;
+        }
+    }
     &__burger{
         padding: 5px;
         height: 35px;
@@ -14,6 +20,9 @@
         color: $main-color;
         &:hover{
             cursor: pointer;
+        }
+        @media only screen and (min-width: 768px){
+            display: none;
         }
     }
     &__box{
@@ -45,6 +54,15 @@
             background-color: $light-grey;
             border-radius: 20px 0 0 20px;
         }
+        @media only screen and (min-width: 768px){
+            font-size: 20px;
+            &--active{
+                font-weight: 700;
+                color: $main-color;
+                background: none;
+            }
+        }
+        
     }
 }
 

@@ -4,6 +4,7 @@ import ColorPicker from '../../components/ColorPicker/ColorPicker'
 import roue from '../../assets/roue.png'
 import polices from '../../data/polices.json'
 import confiture from '../../data/confiture.json'
+import image from '../../assets/vichy/red.jpg'
 
 const sortedPolices = polices
   .map((police) => police.title)
@@ -40,7 +41,7 @@ function Labels() {
     setTextColor(color)
   }
 
-  const [numberOfLabels, setNumberOfLabels] = useState(3)
+  const [numberOfLabels, setNumberOfLabels] = useState(6)
   const handleNumberOfLabelsChange = (event) => {
     setNumberOfLabels(parseInt(event.target.value))
   }
@@ -84,9 +85,11 @@ function Labels() {
             Date de fabrication
           </label>
           <input
+            type="text"
             className="labels__input"
             name="date"
             value={date}
+            maxlength="20"
             onChange={handleDateChange}
           ></input>
         </form>
@@ -129,39 +132,49 @@ function Labels() {
           </div>
         </form>
       </article>
-      <article id="printableArea" className="labels__visu">
-        <div className="labels__exemple">
-          <div className="labels__imageContainer">
-            <img className="labels__image" src={image} />
-          </div>
-          <div className="labels__text">
-            <p
-              className="labels__name"
-              style={{ fontFamily: font, color: textColor }}
-            >
-              {name}
-            </p>
-            <p
-              className="labels__date"
-              style={{ fontFamily: font, color: textColor }}
-            >
-              {date}
-            </p>
+      <article className="labels__visu">
+        <div id="printableArea">
+          <div
+            className="labels__exemple"
+            style='border-image-source: url("./src/assets/vichy/blue2.jpg")'
+          >
+            <div className="labels__imageContainer">
+              <img className="labels__image" src={image} />
+            </div>
+            <div className="labels__text">
+              <p
+                className="labels__name"
+                style={{ fontFamily: font, color: textColor }}
+              >
+                {name}
+              </p>
+              <p
+                className="labels__date"
+                style={{ fontFamily: font, color: textColor }}
+              >
+                {date}
+              </p>
+            </div>
           </div>
         </div>
+        <div className="labels__printing">
+          <label className="labels__label" for="number">
+            Nombre d'étiquettes
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="24"
+            className="labels__input labels__input--number"
+            name="number"
+            value={numberOfLabels}
+            onChange={handleNumberOfLabelsChange}
+          ></input>
+          <button className="labels__button" onClick={handlePrintClick}>
+            Imprimer
+          </button>
+        </div>
       </article>
-
-      <label
-        className="labels__label"
-        for="number"
-        onChange={handleNumberOfLabelsChange}
-      >
-        Nombre d'étiquettes
-      </label>
-      <input name="number" value="3"></input>
-      <button className="labels__button" onClick={handlePrintClick}>
-        Imprimer
-      </button>
     </section>
   )
 }

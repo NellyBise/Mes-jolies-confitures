@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
+    padding: 20px;
+    background-color: $light-grey;
     &__mark{
         display: flex;
         align-items: center;
@@ -14,10 +15,17 @@
         width: 53px;
         height: 53px;
         border-radius: 50%;
+        @media only screen and (min-width: 768px){
+            width: 80px;
+            height : 80px
+      }
     }
     &__title{
         font-family: 'Dancing script';
         font-size: 25px ;
         margin-left: 10px;
+        @media only screen and (min-width: 768px){
+            font-size: 38px;
+      }
     }
 }

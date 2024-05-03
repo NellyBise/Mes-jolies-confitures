@@ -2,6 +2,8 @@ $main-color: #B70709;
 $secondary-color: #D7EEE6;
 $light-grey: #F6F5F3;
 
+$screen-width: 768px;
+
 
 @mixin button {
     background-color: $main-color;
@@ -17,6 +19,10 @@ $light-grey: #F6F5F3;
         cursor: pointer;
         color: yellow;
     }
+    @media only screen and (min-width: 768px){
+        width: 220px;
+        font-size: 18px;
+    }
 }
 
 @mixin h2-title{
@@ -26,4 +32,8 @@ $light-grey: #F6F5F3;
     line-height: 1.5em;
     width: 250px;
     margin: auto;
+    @media only screen and (min-width: 768px){
+        font-size: 30px;
+        width: 60%;
+    }
 }

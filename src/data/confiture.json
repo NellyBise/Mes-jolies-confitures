@@ -2,46 +2,55 @@
   {
     "id": 0,
     "title": "Abricot",
-    "img": "./src/assets/Abricot.jpg"
+    "img": "./src/assets/Abricot.jpg",
+    "classic": "./src/assets/vichy/yellow.jpg"
   },
   {
     "id": 1,
     "title": "Cerise",
-    "img": "./src/assets/Cerise.jpg"
+    "img": "./src/assets/Cerise.jpg",
+    "classic": "./src/assets/vichy/red.jpg"
   },
   {
     "id": 2,
     "title": "Framboise",
-    "img": "./src/assets/Framboise.jpg"
+    "img": "./src/assets/Framboise.jpg",
+    "classic": "./src/assets/vichy/red.jpg"
   },
   {
     "id": 3,
     "title": "Prune",
-    "img": "./src/assets/Prune.jpg"
+    "img": "./src/assets/Prune.jpg",
+    "classic": "./src/assets/vichy/darkblue.jpg"
   },
   {
     "id": 4,
     "title": "Orange",
-    "img": "./src/assets/Orange.jpg"
+    "img": "./src/assets/Orange.jpg",
+    "classic": "./src/assets/vichy/yellow.jpg"
   },
   {
     "id": 5,
     "title": "Pêche",
-    "img": "./src/assets/Peche.jpg"
+    "img": "./src/assets/Peche.jpg",
+    "classic": "./src/assets/vichy/yellow.jpg"
   },
   {
     "id": 6,
     "title": "Poire",
-    "img": "./src/assets/Poire.jpg"
+    "img": "./src/assets/Poire.jpg",
+    "classic": "./src/assets/vichy/yellow.jpg"
   },
   {
     "id": 7,
     "title": "Fraise",
-    "img": "./src/assets/Fraise.jpg"
+    "img": "./src/assets/Fraise.jpg",
+    "classic": "./src/assets/vichy/red.jpg"
   },
   {
     "id": 8,
     "title": "Figue",
-    "img": "./src/assets/Figue.jpg"
+    "img": "./src/assets/Figue.jpg",
+    "classic": "./src/assets/vichy/violet.jpg"
   }
 ]

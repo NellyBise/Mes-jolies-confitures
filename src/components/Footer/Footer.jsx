@@ -1,9 +1,10 @@
 import './Footer.scss'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>Crédits des images</p>
+      <Link to="/credits">Crédits des images</Link>
     </footer>
   )
 }

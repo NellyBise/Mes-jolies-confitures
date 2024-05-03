@@ -13,6 +13,32 @@ function Navigation() {
 
   return (
     <div className="navigation">
+      <nav className="navigation__screenMenu">
+        <ul>
+          <Link
+            className={
+              currentPage === 'Accueil'
+                ? 'navigation__link navigation__link--active'
+                : 'navigation__link'
+            }
+            to="/"
+            onClick={() => handlePageChange('Accueil')}
+          >
+            Accueil
+          </Link>
+          <Link
+            className={
+              currentPage === 'Etiquettes'
+                ? 'navigation__link navigation__link--active'
+                : 'navigation__link'
+            }
+            to="/etiquettes"
+            onClick={() => handlePageChange('Etiquettes')}
+          >
+            Créer des étiquettes
+          </Link>
+        </ul>
+      </nav>
       <button className="navigation__burger" onClick={toggle}>
         <i class="fa-solid fa-bars"></i>
       </button>
