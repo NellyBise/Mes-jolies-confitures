@@ -1,0 +1,47 @@
+[
+  {
+    "id": 0,
+    "title": "Abricot",
+    "img": "./src/assets/Abricot.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Cerise",
+    "img": "./src/assets/Cerise.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Framboise",
+    "img": "./src/assets/Framboise.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Prune",
+    "img": "./src/assets/Prune.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Orange",
+    "img": "./src/assets/Orange.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Pêche",
+    "img": "./src/assets/Peche.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Poire",
+    "img": "./src/assets/Poire.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Fraise",
+    "img": "./src/assets/Fraise.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Figue",
+    "img": "./src/assets/Figue.jpg"
+  }
+]

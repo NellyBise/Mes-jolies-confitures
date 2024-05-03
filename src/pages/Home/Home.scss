@@ -1,15 +1,10 @@
 @import "../../style-variables/variables.scss";
 
 .home{
-    margin: 70px 0 ;
+    margin: 70px 20px ;
     text-align: center;
     &__title{
-        color: $main-color;
-        font-size: 15px;
-        font-weight: 600;
-        line-height: 1.5em;
-        width: 250px;
-        margin: auto;
+        @include h2-title
     }
     &__text{
         margin: 60px 0;

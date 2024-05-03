@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "title": "Arial"
+  },
+  {
+    "id": 1,
+    "title": "Times New Roman"
+  },
+  {
+    "id": 2,
+    "title": "Palatino"
+  },
+  {
+    "id": 3,
+    "title": "Courier New"
+  },
+  {
+    "id": 4,
+    "title": "Dancing script"
+  },
+  {
+    "id": 5,
+    "title": "Calibri"
+  },
+  {
+    "id": 6,
+    "title": "Trebuchet MS"
+  },
+  {
+    "id": 7,
+    "title": "Tahoma"
+  },
+  {
+    "id": 8,
+    "title": "Helvetica"
+  },
+  {
+    "id": 9,
+    "title": "Century Gothic"
+  },
+  {
+    "id": 10,
+    "title": "Bradley Hand"
+  },
+  {
+    "id": 11,
+    "title": "Impact"
+  }
+]

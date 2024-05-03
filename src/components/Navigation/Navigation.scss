@@ -1,6 +1,7 @@
 @import "../../style-variables/variables.scss";
 
 .navigation{
+    max-width: 480px;
     &__burger{
         padding: 5px;
         height: 35px;

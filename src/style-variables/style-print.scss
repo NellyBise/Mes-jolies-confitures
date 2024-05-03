@@ -1,0 +1,28 @@
+@media print {
+  @page {
+    size: A4; /* Taille du papier */
+    margin: 20mm; /* Marges de la page */
+  }
+
+  .labels__visu {
+    width: calc(100% - 40mm); /* Largeur de la zone imprimable, en soustrayant les marges */
+    margin: 20mm; /* Espacement entre les étiquettes */
+  }
+
+  .labels__exemple {
+    display: inline-block; /* Disposition en ligne des étiquettes */
+    width: calc(33.33% - 13.33mm); /* Largeur de chaque étiquette */
+    margin-right: 13.33mm; /* Espacement entre les étiquettes */
+  }
+
+  .labels__image {
+    max-width: 100%; /* Ajuster l'image à la largeur de l'étiquette */
+    height: auto; /* Garder les proportions de l'image */
+  }
+
+  .labels__text {
+    margin-top: 5mm; /* Espacement entre l'image et le texte */
+  }
+
+  /* Autres styles CSS pour l'impression */
+}

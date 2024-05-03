@@ -1,4 +1,5 @@
 import './Home.scss'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -15,7 +16,9 @@ function Home() {
         tout simplement sur papier !<br />
         <br />À vous de jouer !
       </p>
-      <button className="home__button">Créer mes étiquettes</button>
+      <Link className="home__button" to="/etiquettes">
+        Créer mes étiquettes
+      </Link>
     </section>
   )
 }

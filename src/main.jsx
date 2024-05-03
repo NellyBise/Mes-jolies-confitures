@@ -1,5 +1,6 @@
 import { render } from 'preact'
 import './index.scss'
+import './style-variables/style-print.scss'
 import * as React from 'react'
 import { RouterProvider } from 'react-router-dom'
 

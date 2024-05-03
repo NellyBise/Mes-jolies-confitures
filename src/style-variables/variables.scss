@@ -9,10 +9,21 @@ $light-grey: #F6F5F3;
     padding: 8px;
     color: $secondary-color;
     font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
     border-radius: 10px;
     border: none;
     &:hover{
         cursor: pointer;
         color: yellow;
     }
+}
+
+@mixin h2-title{
+    color: $main-color;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5em;
+    width: 250px;
+    margin: auto;
 }

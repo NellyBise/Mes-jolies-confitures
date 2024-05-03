@@ -1,0 +1,110 @@
+@import "../../style-variables/variables.scss";
+
+.labels{
+    text-align: center;
+    &__parameters{
+        background-color: $light-grey;
+        padding: 10px 20px 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        @include h2-title;
+        margin: 12px;
+    }
+    &__logo{
+        width: 30px;
+        height: 30px;
+    }
+    &__colorpicker{
+        display: flex;
+        align-items: center;
+    }
+    &__color{
+        position: absolute;
+        z-index: 1;
+        top: 100px;
+        left: 20%;
+        display: none;
+        &--active{
+            display: block;
+        }
+    }
+    &__visu{
+        height: 230px;
+        background-color: $secondary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__imageContainer{
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image{
+        width: 60px;
+    }
+    &__exemple{
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        height: 160px;
+        width: 300px;
+        border-radius: 10px;
+        background-color: white;
+    }
+    &__text{
+        width: 195px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__name{
+        font-size: 25px;
+        padding-top: 15px;
+    }
+    &__date{
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+    &__button{
+        @include button;
+        margin: 35px;
+    }
+    &__input {
+        width: 100%;
+        height: 30px;
+        box-sizing: border-box;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        font-family: 'Overpass';
+        &:focus{
+           background-color: $secondary-color; 
+        }
+    }
+    &__form{
+        text-align: left;
+        width: 100%;
+    }
+    &__label{
+        font-size: 14px;
+        line-height: 2em;
+        margin-right: 20px;
+    }
+    &__print{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: absolute;
+        padding: 10px;
+        left: 0;
+        top: 0;
+        gap: 10px;
+    }
+}
+

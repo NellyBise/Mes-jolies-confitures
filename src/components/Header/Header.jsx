@@ -1,4 +1,4 @@
-import logo from '../../assets/LOGO.jpg'
+import logo from '../../assets/LOGO.svg'
 import './Header.scss'
 import Navigation from '../Navigation/Navigation'
 

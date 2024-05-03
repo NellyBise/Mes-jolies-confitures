@@ -1,6 +1,6 @@
 import App from './app'
 import Home from './pages/Home/Home'
-import Etiquettes from './pages/Etiquettes/Etiquettes'
+import Labels from './pages/Labels/Labels'
 
 import { createBrowserRouter } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ const Router = createBrowserRouter([
     element: <App />,
     children: [
       { path: '/', index: true, element: <Home /> },
-      { path: '/etiquettes', index: true, element: <Etiquettes /> },
+      { path: '/etiquettes', index: true, element: <Labels /> },
     ],
   },
 ])
