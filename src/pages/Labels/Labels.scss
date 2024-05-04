@@ -51,18 +51,27 @@
         align-items: center;
     }
     &__image{
-        width: 60px;
+        width: 70px;
     }
     &__exemple{
         display: flex;
         justify-content: center;
-        border: 1px solid black;
-        height: 118px;
+        height: 118.5px;
         width: 260px;
         border-radius: 10px;
         background-color: white;
         border: 20px solid transparent;
-        border-image-slice: 170;
+        border-image-slice: 60;
+        &--simple{
+            border: 1px solid black;
+            height: 156.5px;
+            width: 298px;
+        }
+        &--moderne{
+            width: 278px;
+            height: 136.5px;
+            border: 3mm ridge lightgrey;
+        }
     }
     &__text{
         width: 160px;
@@ -72,11 +81,11 @@
         align-items: center;
     }
     &__name{
-        font-size: 25px;
+        font-size: 34px;
         padding-top: 15px;
     }
     &__date{
-        font-size: 15px;
+        font-size: 18px;
         padding-bottom: 15px;
     }
     &__button{

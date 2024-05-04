@@ -4,7 +4,6 @@ import ColorPicker from '../../components/ColorPicker/ColorPicker'
 import roue from '../../assets/roue.png'
 import polices from '../../data/polices.json'
 import confiture from '../../data/confiture.json'
-import image from '../../assets/vichy/red.jpg'
 
 const sortedPolices = polices
   .map((police) => police.title)
@@ -17,6 +16,9 @@ const sortedFruits = confiture
 function Labels() {
   const [name, setName] = useState('Abricot')
   const [image, setImage] = useState('./src/assets/abricot.jpg')
+  const [classicImage, setClassicImage] = useState(
+    './src/assets/vichy/yellow.jpg'
+  )
   const handleNameChange = (event) => {
     const selectedFruit = confiture.find(
       (fruit) => fruit.title === event.target.value
@@ -24,6 +26,7 @@ function Labels() {
     if (selectedFruit) {
       setName(selectedFruit.title)
       setImage(selectedFruit.img)
+      setClassicImage(selectedFruit.classic)
     }
   }
   const [date, setDate] = useState('Juin 2024')
@@ -39,6 +42,10 @@ function Labels() {
   const [textColor, setTextColor] = useState('#000')
   const handleTextColorChange = (color) => {
     setTextColor(color)
+  }
+  const [labelStyle, setlabelStyle] = useState('Classique')
+  const handleLabelStyleChange = (event) => {
+    setlabelStyle(event.target.value)
   }
 
   const [numberOfLabels, setNumberOfLabels] = useState(6)
@@ -110,10 +117,25 @@ function Labels() {
               </option>
             ))}
           </select>
-          <label className="labels__label" for="name3">
-            Ma décoration
+          <label className="labels__label" for="style">
+            Mon style
           </label>
-          <input className="labels__input" name="name3"></input>
+          <select
+            className="labels__input"
+            value={labelStyle}
+            name="style"
+            onChange={handleLabelStyleChange}
+          >
+            <option key="Classique" value="Classique">
+              Classique
+            </option>
+            <option key="Moderne" value="Moderne">
+              Moderne
+            </option>
+            <option key="Simple" value="Simple">
+              Simple
+            </option>
+          </select>
           <div className="labels__colorpicker">
             <p className="labels__label">Ma couleur</p>
             <img
@@ -135,8 +157,18 @@ function Labels() {
       <article className="labels__visu">
         <div id="printableArea">
           <div
-            className="labels__exemple"
-            style='border-image-source: url("./src/assets/vichy/blue2.jpg")'
+            className={
+              labelStyle === 'Simple'
+                ? 'labels__exemple labels__exemple--simple'
+                : labelStyle === 'Moderne'
+                ? 'labels__exemple labels__exemple--moderne'
+                : 'labels__exemple'
+            }
+            style={
+              labelStyle === 'Classique'
+                ? { borderImageSource: `url(${classicImage})` }
+                : {}
+            }
           >
             <div className="labels__imageContainer">
               <img className="labels__image" src={image} />

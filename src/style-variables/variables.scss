@@ -15,9 +15,11 @@ $screen-width: 768px;
     font-size: 14px;
     border-radius: 10px;
     border: none;
+    transform: scale(0.9);
+    transition: 400ms;
     &:hover{
         cursor: pointer;
-        color: yellow;
+        transform: scale(1);
     }
     @media only screen and (min-width: 768px){
         width: 220px;

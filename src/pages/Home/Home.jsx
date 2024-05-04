@@ -16,8 +16,8 @@ function Home() {
         tout simplement sur papier !<br />
         <br />À vous de jouer !
       </p>
-      <Link className="home__button" to="/etiquettes">
-        Créer mes étiquettes
+      <Link to="/etiquettes">
+        <button className="home__button">Créer mes étiquettes</button>
       </Link>
     </section>
   )
