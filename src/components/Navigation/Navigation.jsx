@@ -16,23 +16,35 @@ function Navigation() {
         }
       >
         <ul
-          className={isOpen ? 'navigation__menu ' : ''}
+          className={isOpen ? 'navigation__menu ' : 'navigation__menuScreen'}
           onClick={isOpen ? toggle : null}
         >
-          <NavLink className="navigation__link" activeClassName="active" to="/">
-            Accueil
-          </NavLink>
-          <NavLink
-            className="navigation__link"
-            activeClassName="active"
-            to="/etiquettes"
-          >
-            Créer des étiquettes
-          </NavLink>
+          <li>
+            <NavLink
+              className="navigation__link"
+              activeClassName="active"
+              to="/"
+            >
+              Accueil
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className="navigation__link"
+              activeClassName="active"
+              to="/etiquettes"
+            >
+              Créer des étiquettes
+            </NavLink>
+          </li>
         </ul>
       </nav>
-      <button className="navigation__burger" onClick={toggle}>
-        <i class="fa-solid fa-bars"></i>
+      <button
+        className="navigation__burger"
+        aria-label="Ouvrir le menu de navigation"
+        onClick={toggle}
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
     </div>
   )

@@ -45,11 +45,15 @@
         justify-content: space-around;
         border-radius: 0 0 0 10px;
     }
+    &__menuScreen{
+        display: flex
+    }
     &__link{
         margin-left: 20px;
         padding: 8px 15px;
         text-decoration: none;
         color: black;
+        display:flex;
         &.active{
             background-color: $light-grey;
             border-radius: 20px 0 0 20px;

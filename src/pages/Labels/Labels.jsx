@@ -12,12 +12,10 @@ const sortedFruits = confiture
   .map((fruit) => fruit.title)
   .sort((a, b) => a.localeCompare(b))
 
-function Labels({ printeableArea }) {
+function Labels() {
   const [name, setName] = useState('Abricot')
-  const [image, setImage] = useState('./src/assets/abricot.jpg')
-  const [classicImage, setClassicImage] = useState(
-    './src/assets/vichy/yellow.jpg'
-  )
+  const [image, setImage] = useState('/fruits/Abricot.jpg')
+  const [classicImage, setClassicImage] = useState('/vichy/yellow.jpg')
   const handleNameChange = (event) => {
     const selectedFruit = confiture.find(
       (fruit) => fruit.title === event.target.value
@@ -85,6 +83,7 @@ function Labels({ printeableArea }) {
             className="labels__input"
             value={name}
             name="name"
+            id="name"
             onChange={handleNameChange}
           >
             {sortedFruits.map((title, id) => (
@@ -100,6 +99,7 @@ function Labels({ printeableArea }) {
             type="text"
             className="labels__input"
             name="date"
+            id="date"
             value={date}
             maxlength="20"
             onChange={handleDateChange}
@@ -114,6 +114,7 @@ function Labels({ printeableArea }) {
             className="labels__input"
             value={font}
             name="police"
+            id="police"
             onChange={handleFontChange}
           >
             {sortedPolices.map((title, id) => (
@@ -129,6 +130,7 @@ function Labels({ printeableArea }) {
             className="labels__input"
             value={labelStyle}
             name="style"
+            id="style"
             onChange={handleLabelStyleChange}
           >
             <option key="Classique" value="Classique">
@@ -161,7 +163,7 @@ function Labels({ printeableArea }) {
             }
           >
             <div className="labels__imageContainer">
-              <img className="labels__image" src={image} />
+              <img className="labels__image" src={image} alt="image de fruit" />
             </div>
             <div className="labels__text">
               <p
@@ -189,6 +191,7 @@ function Labels({ printeableArea }) {
             max="24"
             className="labels__input labels__input--number"
             name="number"
+            id="number"
             value={numberOfLabels}
             onChange={handleNumberOfLabelsChange}
           ></input>

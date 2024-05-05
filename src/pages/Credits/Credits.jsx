@@ -1,8 +1,8 @@
 import './Credits.scss'
-import abricot from '../../assets/Abricot.jpg'
-import fraise from '../../assets/Fraise.jpg'
-import poire from '../../assets/Poire.jpg'
-import prune from '../../assets/Prune.jpg'
+import abricot from '/fruits/Abricot.jpg'
+import fraise from '/fruits/Fraise.jpg'
+import poire from '/fruits/Poire.jpg'
+import prune from '/fruits/Prune.jpg'
 
 function Credits() {
   return (
