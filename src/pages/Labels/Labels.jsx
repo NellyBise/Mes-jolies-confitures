@@ -67,10 +67,16 @@ function Labels() {
       tempContainer.innerHTML = printContent
       document.body.appendChild(tempContainer)
       window.print()
-      document.body.removeChild(tempContainer)
+      setTimeout(() => {
+        document.body.removeChild(tempContainer)
+      }, 500)
     }
   }
-
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+    }
+  }
   return (
     <section className="labels">
       <article className="labels__parameters">
@@ -103,6 +109,7 @@ function Labels() {
             value={date}
             maxlength="20"
             onChange={handleDateChange}
+            onKeyDown={handleKeyPress}
           ></input>
         </form>
         <h2 className="labels__title">Mon design</h2>
