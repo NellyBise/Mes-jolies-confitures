@@ -1,77 +1,39 @@
 import './Navigation.scss'
 import { useState } from 'preact/hooks'
-import { Link, useParams } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
 
-  const [currentPage, setCurrentPage] = useState('Accueil')
-  const handlePageChange = (pageName) => {
-    setCurrentPage(pageName)
-  }
-
   return (
     <div className="navigation">
-      <nav className="navigation__screenMenu">
-        <ul>
-          <Link
-            className={
-              currentPage === 'Accueil'
-                ? 'navigation__link navigation__link--active'
-                : 'navigation__link'
-            }
-            to="/"
-            onClick={() => handlePageChange('Accueil')}
-          >
+      <nav
+        className={
+          isOpen
+            ? 'navigation__box navigation__box--active'
+            : 'navigation__screenMenu'
+        }
+      >
+        <ul
+          className={isOpen ? 'navigation__menu ' : ''}
+          onClick={isOpen ? toggle : null}
+        >
+          <NavLink className="navigation__link" activeClassName="active" to="/">
             Accueil
-          </Link>
-          <Link
-            className={
-              currentPage === 'Etiquettes'
-                ? 'navigation__link navigation__link--active'
-                : 'navigation__link'
-            }
+          </NavLink>
+          <NavLink
+            className="navigation__link"
+            activeClassName="active"
             to="/etiquettes"
-            onClick={() => handlePageChange('Etiquettes')}
           >
             Créer des étiquettes
-          </Link>
+          </NavLink>
         </ul>
       </nav>
       <button className="navigation__burger" onClick={toggle}>
         <i class="fa-solid fa-bars"></i>
       </button>
-      {isOpen ? (
-        <nav className="navigation__box navigation__box--active">
-          <ul className="navigation__menu " onClick={toggle}>
-            <Link
-              className={
-                currentPage === 'Accueil'
-                  ? 'navigation__link navigation__link--active'
-                  : 'navigation__link'
-              }
-              to="/"
-              onClick={() => handlePageChange('Accueil')}
-            >
-              Accueil
-            </Link>
-            <Link
-              className={
-                currentPage === 'Etiquettes'
-                  ? 'navigation__link navigation__link--active'
-                  : 'navigation__link'
-              }
-              to="/etiquettes"
-              onClick={() => handlePageChange('Etiquettes')}
-            >
-              Créer des étiquettes
-            </Link>
-          </ul>
-        </nav>
-      ) : (
-        <nav className="navigation__box"></nav>
-      )}
     </div>
   )
 }

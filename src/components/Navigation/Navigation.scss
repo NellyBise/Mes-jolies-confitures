@@ -50,13 +50,13 @@
         padding: 8px 15px;
         text-decoration: none;
         color: black;
-        &--active{
+        &.active{
             background-color: $light-grey;
             border-radius: 20px 0 0 20px;
         }
         @media only screen and (min-width: 768px){
             font-size: 20px;
-            &--active{
+            &.active{
                 font-weight: 700;
                 color: $main-color;
                 background: none;

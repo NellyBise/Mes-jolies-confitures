@@ -1,7 +1,6 @@
 import './Labels.scss'
 import { useState } from 'preact/hooks'
 import ColorPicker from '../../components/ColorPicker/ColorPicker'
-import roue from '../../assets/roue.png'
 import polices from '../../data/polices.json'
 import confiture from '../../data/confiture.json'
 
@@ -13,7 +12,7 @@ const sortedFruits = confiture
   .map((fruit) => fruit.title)
   .sort((a, b) => a.localeCompare(b))
 
-function Labels() {
+function Labels({ printeableArea }) {
   const [name, setName] = useState('Abricot')
   const [image, setImage] = useState('./src/assets/abricot.jpg')
   const [classicImage, setClassicImage] = useState(
@@ -37,12 +36,11 @@ function Labels() {
   const handleFontChange = (event) => {
     setFont(event.target.value)
   }
-  const [isOpen, setIsOpen] = useState(false)
-  const toggle = () => setIsOpen(!isOpen)
   const [textColor, setTextColor] = useState('#000')
   const handleTextColorChange = (color) => {
     setTextColor(color)
   }
+
   const [labelStyle, setlabelStyle] = useState('Classique')
   const handleLabelStyleChange = (event) => {
     setlabelStyle(event.target.value)
@@ -50,31 +48,38 @@ function Labels() {
 
   const [numberOfLabels, setNumberOfLabels] = useState(6)
   const handleNumberOfLabelsChange = (event) => {
-    setNumberOfLabels(parseInt(event.target.value))
+    if (event.target.value >= 1 && event.target.value <= 24) {
+      setNumberOfLabels(parseInt(event.target.value))
+    } else {
+      setNumberOfLabels(1)
+    }
   }
 
   const handlePrintClick = () => {
     const printableArea = document.getElementById('printableArea')
     if (printableArea) {
       const content = printableArea.innerHTML
-      const originalContent = document.body.innerHTML
       const printContent = `<div class="labels__print">${Array.from(
         { length: numberOfLabels },
         (_, index) => content
       ).join('')}</div>`
-      document.body.innerHTML = printContent
+
+      // Création d'un élément temporaire pour contenir le contenu à imprimer
+      const tempContainer = document.createElement('div')
+      tempContainer.innerHTML = printContent
+      document.body.appendChild(tempContainer)
       window.print()
-      document.body.innerHTML = originalContent
+      document.body.removeChild(tempContainer)
     }
   }
 
   return (
     <section className="labels">
       <article className="labels__parameters">
-        <h2 className="labels__title">Mes données</h2>
+        <h2 className="labels__title">Ma confiture</h2>
         <form className="labels__form">
           <label className="labels__label" for="name">
-            Ma confiture
+            Fruit
           </label>
           <select
             className="labels__input"
@@ -89,7 +94,7 @@ function Labels() {
             ))}
           </select>
           <label className="labels__label" for="date">
-            Date de fabrication
+            Date de fabrication ou précision
           </label>
           <input
             type="text"
@@ -100,7 +105,7 @@ function Labels() {
             onChange={handleDateChange}
           ></input>
         </form>
-        <h2 className="labels__title">Mon style</h2>
+        <h2 className="labels__title">Mon design</h2>
         <form className="labels__form">
           <label className="labels__label" for="police">
             Mon écriture
@@ -136,22 +141,7 @@ function Labels() {
               Simple
             </option>
           </select>
-          <div className="labels__colorpicker">
-            <p className="labels__label">Ma couleur</p>
-            <img
-              className="labels__logo"
-              src={roue}
-              alt="roue chromatique"
-              onClick={toggle}
-            />
-          </div>
-          <div
-            className={
-              isOpen ? 'labels__color labels__color--active' : 'labels__color'
-            }
-          >
-            <ColorPicker onColorChange={handleTextColorChange} />
-          </div>
+          <ColorPicker onColorChange={handleTextColorChange} />
         </form>
       </article>
       <article className="labels__visu">
@@ -191,7 +181,7 @@ function Labels() {
         </div>
         <div className="labels__printing">
           <label className="labels__label" for="number">
-            Nombre d'étiquettes
+            Nombre d'étiquettes (1-24)
           </label>
           <input
             type="number"
@@ -203,7 +193,7 @@ function Labels() {
             onChange={handleNumberOfLabelsChange}
           ></input>
           <button className="labels__button" onClick={handlePrintClick}>
-            Imprimer
+            Imprimer en A4
           </button>
         </div>
       </article>

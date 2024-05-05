@@ -1,0 +1,21 @@
+.colorpicker{
+    display: flex;
+    align-items: center;
+    &__popover{
+        position: absolute;
+        z-index: 2;
+        top: 200px;
+        left: 20%;
+    }
+    &__cover{
+        position: fixed;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    }
+    &__logo{
+        width: 30px;
+        height: 30px;
+    }
+}

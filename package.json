@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "jspdf": "^2.5.1",
     "preact": "^10.19.6",
     "react-color": "^2.19.3",
     "react-router-dom": "^6.23.0"

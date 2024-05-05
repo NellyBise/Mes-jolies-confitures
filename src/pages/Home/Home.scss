@@ -1,8 +1,17 @@
 @import "../../style-variables/variables.scss";
 
 .home{
-    margin: 70px 20px ;
+    padding: 70px 20px ;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    background-image: url("./src/assets/confiture.webp");
+    background-size: cover;
+    &__article{
+        background-color: rgba(255, 255, 255, 0.9) ;
+        width: 70%;
+        padding: 30px;
+    }
     &__title{
         @include h2-title
     }
@@ -10,12 +19,21 @@
         margin: 60px 0;
         text-align: left;
         font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5rem;
         @media only screen and (min-width: 768px){
             font-size: 20px;
         }
     }
     &__button{
         @include button;
+    }
+    &__fruits{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image{
+        width: 50px;
     }
 
 }

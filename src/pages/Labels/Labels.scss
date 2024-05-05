@@ -18,24 +18,6 @@
         @include h2-title;
         margin: 12px;
     }
-    &__logo{
-        width: 30px;
-        height: 30px;
-    }
-    &__colorpicker{
-        display: flex;
-        align-items: center;
-    }
-    &__color{
-        position: absolute;
-        z-index: 1;
-        top: 200px;
-        left: 20%;
-        display: none;
-        &--active{
-            display: block;
-        }
-    }
     &__visu{
         min-height: 340px;
         background-color: $secondary-color;
@@ -135,6 +117,7 @@
         position: absolute;
         left: 0;
         top: 0;
+        background-color: white;
     }
 }
 
