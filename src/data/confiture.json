@@ -52,5 +52,35 @@
     "title": "Figue",
     "img": "/fruits/Figue.jpg",
     "classic": "/vichy/violet.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Ananas",
+    "img": "/fruits/Ananas.jpg",
+    "classic": "/vichy/yellow.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Kumquat",
+    "img": "/fruits/Kumquat.jpg",
+    "classic": "/vichy/yellow.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Mûre",
+    "img": "/fruits/Mure.jpg",
+    "classic": "/vichy/darkblue.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Groseille",
+    "img": "/fruits/Groseille.jpg",
+    "classic": "/vichy/red.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Cassis",
+    "img": "/fruits/Cassis.jpg",
+    "classic": "/vichy/darkblue.jpg"
   }
 ]
