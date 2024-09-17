@@ -12,9 +12,9 @@ function Home() {
           J’aime bien faire des pots de confiture avec de jolies étiquettes, et
           vous ?<br />
           <br />
-          Pour vous simplifier la vie, je vous propose un outil de création et
-          d'impression d’étiquettes en format A4 sur des planches 3x8 ou tout
-          simplement sur papier !<br />
+          Pour vous simplifier la vie, je vous propose un outil gratuit de
+          création et d'impression d’étiquettes en format A4 sur des planches
+          3x8 ou tout simplement sur papier !<br />
           <br />À vous de jouer !
         </p>
         <NavLink to="/etiquettes" activeClassNane="active">
