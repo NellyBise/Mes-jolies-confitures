@@ -26,24 +26,27 @@
         }
     }
     &__box{
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: fixed;
+        top: 93px;
+        left: 0;
+        width:100vw;
+        height:100vh;
         transform : translateY(-100%);
-        transition: 400ms;
+        opacity:0;
+        transition: 400ms ease-in-out;
         &--active{
+            opacity: 1;
             transform : translateY(0px)
         }
     }
     &__menu{
         background-color: $secondary-color;
         box-shadow: -4px 4px 5px rgba(0,0,0,0.2) ;
-        width: 130px;
-        height: 230px;
+        height:100vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        border-radius: 0 0 0 10px;
+        padding: 40px 0px 0px 60px;
+        gap: 40px;
     }
     &__menuScreen{
         display: flex

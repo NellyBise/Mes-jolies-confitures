@@ -6,7 +6,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: $light-grey;
+    background: rgb(155,155,155);
+    background: linear-gradient(153deg, rgba(155,155,155,1) 0%, rgba(246,245,243,1) 68%, rgba(246,245,243,1) 100%);
+    @media only screen and (min-width: 768px){
+        padding: 20px 50px 20px 50px;
+    }
     &__mark{
         display: flex;
         align-items: center;
@@ -17,7 +21,7 @@
         border-radius: 50%;
         @media only screen and (min-width: 768px){
             width: 80px;
-            height : 80px
+            height : 80px;
       }
     }
     &__title{
